@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="vendors/angular.min.js"></script>
+    <script src="vendors/angular-route.min.js"></script>
+    <script src="scripts/client.js"></script>
+    <title>Code Challenge 5</title>
+</head>
+<body>
+    <h1>MEAN Messaging App</h1>
+    <main ng-controller="MessageController as mc">
+        <section>
+            <h2>Add a Comment</h2>
+            <input ng-model="mc.newMessage.name" placeholder="Name">
+            <input ng-model="mc.newMessage.comment" placeholder="Comment">
+            <button ng-click="mc.addMessage(mc.newMessage)">Add</button>
+        </section>
+        <section>
+            <h2>Message Board</h2>
+            <ul ng-repeat="message at mc.SOMETHING">
+                <li>{{message.name}}: {{message.comment}}</li>
+            </ul>
+        </section>
+</main>
+</body>
+</html>
