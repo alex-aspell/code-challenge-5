@@ -14,6 +14,7 @@ const messagecontroller = app.controller('MessageController', ['$http', function
         }).then(function(response){
             console.log('Post response', response);
             self.getMessages();
+            self.newMessage = '';
         }).catch(function(error){
             console.log('Post failed', error);
         })
