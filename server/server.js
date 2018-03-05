@@ -23,6 +23,8 @@ mongoose.connection.on('error', function (error) {
 mongoose.connect(databaseUrl);
 
 //router
+const messageRouter = require('./routes/message-router');
+app.use('/message', messageRouter);
 
 const port = process.env.PORT || 12345
 

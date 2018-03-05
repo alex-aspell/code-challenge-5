@@ -14,13 +14,15 @@
     <main ng-controller="MessageController as mc">
         <section>
             <h2>Add a Comment</h2>
-            <input ng-model="mc.newMessage.name" placeholder="Name">
-            <input ng-model="mc.newMessage.comment" placeholder="Comment">
+            <form>
+            <input class="form-control" ng-model="mc.newMessage.name" placeholder="Name">
+            <input class="form-control" ng-model="mc.newMessage.comment" placeholder="Comment">
             <button ng-click="mc.addMessage(mc.newMessage)">Add</button>
+            </form>
         </section>
         <section>
             <h2>Message Board</h2>
-            <ul ng-repeat="message at mc.SOMETHING">
+            <ul ng-repeat="message in mc.messageArray">
                 <li>{{message.name}}: {{message.comment}}</li>
             </ul>
         </section>
